@@ -1,4 +1,0 @@
--rw-r--r--  1 liut2  liut2  1827 Apr 13 20:39 simpleShell.c
--rw-r--r--  1 liut2  liut2     0 Apr 13 20:40 t1.txt
--rw-r--r--  1 liut2  liut2     0 Apr 13 20:40 t2.txt
--rw-r--r--  1 liut2  liut2     0 Apr 13 20:40 t3.txt4
