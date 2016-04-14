@@ -3,7 +3,7 @@
  * Author: Sherri Goings
  * Last modified: 1/18/2014
  */
- 
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -11,7 +11,7 @@
 int main() {
   int desp[2];                 // array of 2 file descriptors
   const int MAX_LENGTH = 128;  // max length of line
-  
+
   // after call to pipe desp[0] will be a file that reads from
   // the pipe, desp[1] will be a file that writes to the pipe
   pipe(desp);
@@ -32,6 +32,6 @@ int main() {
   // close both files
   close(desp[0]);
   close(desp[1]);
-  
+
   return 0;
 }
