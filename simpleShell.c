@@ -75,7 +75,7 @@ void subProcess(int curInFd, int curOutFd, char** cmd){
       close(curInFd);
     }
     //if the write file descriptor isn't 1, then it means we are writing to the write end of a pipe
-    if (curOutFd != 0) {
+    if (curOutFd != 1) {
       dup2(curOutFd, 1);
       close(curOutFd);
     }
