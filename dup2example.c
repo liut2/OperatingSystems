@@ -16,7 +16,6 @@ int main() {
   int newfd = open("test.out", O_CREAT|O_WRONLY, 0644);
 
   printf("This goes to the standard output\n");
-  printf("the new file descriptor is %d\n", newfd);
   fflush( stdout );
 
   // standard output is file descriptor 1, so this call to
