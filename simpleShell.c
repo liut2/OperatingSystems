@@ -5,6 +5,7 @@
 #include <string.h>
 #include <fcntl.h>
 char** readLineOfWords();
+char** removeIndex();
 
 //this function checks to see which operator is present
 int * checkFreq(char** words) {
@@ -68,13 +69,27 @@ int redirectionHelper(int *fre, char** words) {
   i = 0;
   while (words[i] != NULL) {
     if (strcmp(words[i], ">") == 0 || strcmp(words[i], "<") == 0) {
-      words[i] = NULL;
+      words = removeIndex(words,i);
+      words = removeIndex(words,i);
       break;
     }
     i++;
   }
   return 1;
 }
+
+char** removeIndex(char** words, int i){
+  int j = 0;
+  while (words[j] != NULL){
+    if(j > i){
+      words[j-1] = words[j];
+    }
+    j ++;
+  }
+  words[j-1] = NULL;
+  return words;
+}
+
 //this struct holds a single command from a pipe operation
 struct Command{
   char** cmd;
